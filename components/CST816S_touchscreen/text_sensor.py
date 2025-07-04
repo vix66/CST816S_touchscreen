@@ -6,7 +6,7 @@ from esphome.const import CONF_ID
 cst816s_touchscreen_ns = cg.esphome_ns.namespace('cst816s_touchscreen')
 CST816STouchScreen = cst816s_touchscreen_ns.class_('CST816STouchScreen', text_sensor.TextSensor, cg.Component)
 
-CONFIG_SCHEMA = text_sensor.TEXT_SENSOR_SCHEMA.extend({
+CONFIG_SCHEMA = text_sensor.text_sensor_schema.extend({
     cv.GenerateID(): cv.declare_id(CST816STouchScreen)
 }).extend(cv.COMPONENT_SCHEMA)
 
